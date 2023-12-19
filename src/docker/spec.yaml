@@ -12,8 +12,6 @@ spec:
       SNOW_WAREHOUSE: BI_WH
       SNOW_DATABASE: mistral_vllm_db
       SNOW_SCHEMA: PUBLIC
-      temperature: 0
-      max_tokens: 200
     resources:
       requests:
         nvidia.com/gpu: 1

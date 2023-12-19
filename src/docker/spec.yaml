@@ -8,7 +8,6 @@ spec:
     env:
       LLM_MODEL: mistralai/Mistral-7B-Instruct-v0.1
       HUGGINGFACE_TOKEN: <you huggingface token>
-      API_BASE: 'http://localhost:8000'
       SNOW_ROLE: SYSADMIN
       SNOW_WAREHOUSE: BI_WH
       SNOW_DATABASE: mistral_vllm_db

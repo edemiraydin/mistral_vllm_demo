@@ -39,7 +39,7 @@ create stage if not exists files encryption = (type = 'SNOWFLAKE_SSE');
 
 DROP SERVICE IF EXISTS mistral;
 CREATE SERVICE  mistral
-  IN COMPUTE POOL EJ_COMPUTE_POOL -- only 1 GPU needed for vllm
+  IN COMPUTE POOL EJ_GPU_3_COMPUTE_POOL -- only 1 GPU needed for vllm
   FROM @YAMLS
   SPEC='spec.yaml'
   MIN_INSTANCES=1

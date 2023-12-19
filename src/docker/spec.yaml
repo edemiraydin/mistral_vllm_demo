@@ -1,0 +1,34 @@
+spec:
+  container:
+  - name: vllm
+    image: "sfsenorthamerica-polaris2.registry.snowflakecomputing.com/mistral_vllm_db/public/images/mistral"
+    volumeMounts:
+      - name: stage
+        mountPath: /workspace/stage
+    env:
+      LLM_MODEL: mistralai/Mistral-7B-Instruct-v0.1
+      HUGGINGFACE_TOKEN: <you huggingface token>
+      API_BASE: 'http://127.0.0.1:8000'
+      SNOW_ROLE: SYSADMIN
+      SNOW_WAREHOUSE: BI_WH
+      SNOW_DATABASE: mistral_vllm_db
+      SNOW_SCHEMA: PUBLIC
+      temperature: 0
+      max_tokens: 200
+    resources:
+      requests:
+        nvidia.com/gpu: 4
+      limits:
+        nvidia.com/gpu: 4
+  volume:
+  - name: stage
+    source: "@FILES"
+    uid: 1000
+    gid: 1000
+  endpoint:
+  - name: mistral
+    port: 8000
+    public: true
+  - name: jupyter # For jupyter only - remove only validated
+    port: 8888
+    public: true

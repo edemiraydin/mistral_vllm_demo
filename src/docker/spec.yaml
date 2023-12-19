@@ -6,7 +6,7 @@ spec:
       - name: stage
         mountPath: /workspace/stage
     env:
-      LLM_MODEL: mistralai/Mistral-7B-Instruct-v0.1
+      LLM_MODEL: mistralai/Mistral-7B-Instruct-v0.2
       HUGGINGFACE_TOKEN: <you huggingface token>
       SNOW_ROLE: SYSADMIN
       SNOW_WAREHOUSE: BI_WH

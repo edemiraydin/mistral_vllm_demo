@@ -1,7 +1,7 @@
 spec:
   container:
   - name: vllm
-    image: "sfsenorthamerica-polaris2.registry.snowflakecomputing.com/mistral_vllm_db/public/images/mistral"
+    image: "<Snowflake acct>.registry.snowflakecomputing.com/mistral_vllm_db/public/images/mistral"
     volumeMounts:
       - name: stage
         mountPath: /workspace/stage

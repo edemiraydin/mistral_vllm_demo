@@ -50,5 +50,5 @@ CREATE SERVICE  mistral
 
 
 -- let's get the endpoints vLLM and Jupyter
-DESCRIBE SERVICE mistral;
+SHOW ENDPOINTS IN SERVICE MISTRAL;
 

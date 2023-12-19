@@ -17,9 +17,9 @@ spec:
       max_tokens: 200
     resources:
       requests:
-        nvidia.com/gpu: 4
+        nvidia.com/gpu: 1
       limits:
-        nvidia.com/gpu: 4
+        nvidia.com/gpu: 1
   volume:
   - name: stage
     source: "@FILES"
